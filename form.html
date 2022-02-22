@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+</head> 
+<body>
+    <h2 align="center">Registration Form (STUDENT)</h3>
+        <table align="center" cellpadding="7">
+            <tr>
+                <td>Name</td> 
+                <td>
+                    <input type="text" name="Name" placeholder="Name" id="Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td><input type="email" name="EmailID" id="email" placeholder="abcd@gmail.com"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile Number</td>
+                <td>
+                    <input type="text" name="MobileNumber" id="PhoneNumber" placeholder="PhoneNumber"/>
+                </td>
+            </tr>
+            
+                
+            <tr>
+                <td>Password</td>
+                <td> 
+                    <input type="password" name="password" id="password">
+                </td>
+               
+            </tr>
+           
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" onclick="FormValidation()">
+
+
+                </td>
+            </tr>
+        </table>
+        </form>
+        <script>
+            function FormValidation() {
+                var name = document.getElementById("Name");
+                var email = document.getElementById("email");
+                var password = document.getElementById("password");
+                var phonenumber = document.getElementById("PhoneNumber");
+                var gender = document.getElementById("gender");
+                var lang = document.getElementById("language");
+                if (name.value.length < 6) {
+                    alert("Name length should not be less than 6 characters");
+
+                }
+
+                else if (!(email.value.match())) {
+                    alert("please enter a valid email id");
+
+                }
+
+                else if (password.value.length < 6) {
+                    alert("password length should not be less than 6 characters");
+
+                }
+                else if (phonenumber.value.length != 10) {
+                    alert("phonenumber should be of length 10 only");
+
+                }
+                else if (gender.value == "gender") {
+                    alert("choose gender");
+                }
+
+                else if (language.value == "Language") {
+                    alert("choose language");
+                }
+
+                else {
+                    document.write("your response submitted successfully");
+                }
+
+            }
+
+
+        </script>
+</body>
+
+</html>
+
+
+
+
